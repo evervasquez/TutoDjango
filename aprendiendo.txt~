@@ -1,6 +1,6 @@
-TUTORIAL ECHO PARA RECORDAR LO QUE VOY APRENDIENDO
+#TUTORIAL ECHO PARA RECORDAR LO QUE VOY APRENDIENDO
 
-1.-ASPECTOS BASICOS DE CONFIGURACION
+##1.-ASPECTOS BASICOS DE CONFIGURACION
    a)Archivo settings.py de la aplicación
      	**Importamos el modulo os y establecemos la ruta de proyecto.
 		#codigo
@@ -42,7 +42,7 @@ TUTORIAL ECHO PARA RECORDAR LO QUE VOY APRENDIENDO
     		'django.contrib.staticfiles',
     		'django.contrib.admin',
 				)
-2.-LANZAR LA INTERFACE DE ADMINISTRACION
+##2.-LANZAR LA INTERFACE DE ADMINISTRACION
    a)Agregamos el código al archivo 'aplicacion'/urls.py de modo que quede así
 		#código
 		from django.contrib import admin
@@ -51,5 +51,6 @@ TUTORIAL ECHO PARA RECORDAR LO QUE VOY APRENDIENDO
 	   ---->url(r'^admin/', include(admin.site.urls)),
 					)
 
-NOTA = hasta aqui queda configurado la aplicación en django
+NOTA = hasta aqui queda configurado la aplicación en django, de aquí se tratara de manejar modelos, vistas, enviar y recibir datos.
+
 
