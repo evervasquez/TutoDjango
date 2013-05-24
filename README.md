@@ -53,7 +53,10 @@ Agregamos el código al archivo 'aplicacion'/urls.py de modo que quede así
 	admin.autodiscover()
 	urlpatterns = patterns('',
         url(r'^admin/', include(admin.site.urls)),
-					)
+
+Sincronizamos la Base de datos
+	
+	python manage.py syncdb					)
 ######NOTA = hasta aqui queda configurado la aplicación en django, de aquí se tratara de manejar modelos, vistas, enviar y recibir datos.
 
 
