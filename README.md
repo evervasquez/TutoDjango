@@ -47,7 +47,7 @@ Instalamos la aplicación admin
 			 )
 			
 ###2.-LANZAR LA INTERFAZ DE ADMINISTRACIÓN
-Agregamos el código al archivo 'aplicacion'/urls.py de modo que quede así
+Agregamos el código al archivo `'aplicacion'/urls.py` de modo que quede así
 
 	from django.contrib import admin
 	admin.autodiscover()
