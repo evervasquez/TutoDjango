@@ -62,3 +62,21 @@ Sincronizamos la Base de datos
 ######NOTA = hasta aqui queda configurado la aplicación en django, de aquí se tratara de manejar modelos, vistas, enviar y recibir datos.
 
 
+###3.-CONFIGURAR LOS CSS, JS, IMG - ARCHIVOS STATIC
+settings.py
+
+* directorio de archivos staticos
+
+		STATICFILES_DIRS = (
+    		os.path.join(RUTA_PROYECTO,'static'),
+			   )
+
+* directorio para plantillas
+
+		TEMPLATE_DIRS = (
+    		os.path.join(RUTA_PROYECTO,'plantillas')
+				)
+
+	Crear carpetas `static, plantillas`, de modo que quede así:
+	
+	<img src="http://img716.imageshack.us/img716/7654/staticob.png">
