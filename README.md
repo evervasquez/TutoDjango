@@ -121,3 +121,19 @@ settings.py
 * Crear archivo `base.html` y `index.html`
 
 	<img src="http://img703.imageshack.us/img703/764/indexlvh.png">
+	
+	* base.html(css,js)
+	
+		```
+		<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.css">
+		<script src="{{ STATIC_URL }}js/fanbox_init.js"></script>
+		{% block contenido %}{% endblock %}
+		```
+	* index.html
+		```
+		{% extends 'base.html' %}
+		{% block contenido %}
+		<div>contenido</div>
+		{% end block %}
+		```
+
