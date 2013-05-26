@@ -10,11 +10,14 @@ Importamos el modulo `import os` y establecemos la ruta de proyecto:
 		
 Establecemos al Administrador
 
+```js
 	ADMINS = (
 	('eveR Vasquez', 'sonico999@gmail.com'),
 		 )
+```
 Configuramos la base de datos
 
+```js
 	DATABASES = {
 	'default': {
 	'ENGINE': 'django.db.backends.mysql', 
@@ -25,17 +28,21 @@ Configuramos la base de datos
 	'PORT': '3126', 
 	            }
 		     }
-		
+```		
 Zona Horaria
 
+```js
 	TIME_ZONE = 'America/Lima'
-
+```
 Lenguaje
-		
+
+```js
 	LANGUAGE_CODE = 'es-PE'
+```
 
 Instalamos la aplicación admin
- 		
+
+```js
 	INSTALLED_APPS = (
 	'django.contrib.auth',
 	'django.contrib.contenttypes',
@@ -45,15 +52,18 @@ Instalamos la aplicación admin
 	'django.contrib.staticfiles',
         'django.contrib.admin',
 			 )
-			
+```
+
 ###2.-LANZAR LA INTERFAZ DE ADMINISTRACIÓN
 Agregamos el código al archivo `'aplicacion'/urls.py` de modo que quede así
 
+```js
 	from django.contrib import admin
 	admin.autodiscover()
 	urlpatterns = patterns('',
         url(r'^admin/', include(admin.site.urls)),
         		      )
+```
 
 Sincronizamos la Base de datos
 	
@@ -67,16 +77,43 @@ settings.py
 
 * directorio de archivos staticos
 
+```js
 		STATICFILES_DIRS = (
     		os.path.join(RUTA_PROYECTO,'static'),
 			   )
+```
 
 * directorio para plantillas
 
+```js
 		TEMPLATE_DIRS = (
     		os.path.join(RUTA_PROYECTO,'plantillas')
 				)
+```
 
-	Crear carpetas `static, plantillas`, de modo que quede así:
+* Crear carpetas `static, plantillas`, de modo que quede así:
 	
 	<img src="http://imageshack.us/a/img109/3413/statica.png">
+
+###4.-ENVIO DE PARAMETROS Y RENDERIZAR PLANTILLAS
+* view.py
+
+```js
+		from django.shortcuts import render_to_response
+		from django.template import RequestContext
+		# definimos el metodos, para el envio de los css en /static/ se pone el ultimo parametro
+		def web(request):
+    			titulo = 'Bienvenido a la web del congreso'
+    			return render_to_response('index.html', {'title': titulo},context_instance=RequestContext(request))
+```
+* urls.py
+
+```js
+		from webcongreso.view import web
+		urlpatterns = patterns('',
+    		url(r'^admin/', include(admin.site.urls)),
+    		url(r'^$', web),
+    		url(r'web/^$', web),
+				      )
+```
+
