@@ -25,7 +25,7 @@ Configuramos la base de datos
 	'USER': 'root',
 	'PASSWORD': 'admin',
 	'HOST': 'localhost',
-	'PORT': '3126', 
+	'PORT': '3306', 
 	            }
 		     }
 ```		
@@ -122,7 +122,7 @@ settings.py
 
 	<img src="http://img703.imageshack.us/img703/764/indexlvh.png">
 	
-	* base.html(css,js)
+	* base.html `{{ STATIC URL}}` - css, js
 	
 		```
 		<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.css">
