@@ -79,4 +79,4 @@ settings.py
 
 	Crear carpetas `static, plantillas`, de modo que quede así:
 	
-	<img src="http://img716.imageshack.us/img716/7654/staticob.png">
+	<img src="http://imageshack.us/a/img109/3413/statica.png">
