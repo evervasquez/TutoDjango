@@ -116,4 +116,8 @@ settings.py
     		url(r'web/^$', web),
 				      )
 ```
+###5.-RECIBIR PARAMETROS EN VISTAS
 
+* Crear archivo `base.html` y `index.html`
+
+	<img src="http://img703.imageshack.us/img703/764/indexlvh.png">
