@@ -177,3 +177,6 @@ settings.py
 			
 			admin.site.register('clase del modelo')
 ```
+* Sincronizamos la base de datos
+	
+	`python manage.py syncdb`
