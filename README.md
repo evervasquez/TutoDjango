@@ -176,4 +176,4 @@ settings.py
 			from django.contrib from admin
 			
 			admin.site.register('clase del modelo')
-		```
+```
