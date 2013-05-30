@@ -156,11 +156,24 @@ settings.py
 ```
 ###7.-TRABAJAR CON MODELOS
 
-* En la `app creada`, archivo models.py
+* En la `app creada`, Modificar el archivo models.py
 
 ```
 	# ejemplo de modelo
 	class marca(models.Model):
 		descripcion = models.CharField(max_length=50)
 		estado = models.IntegerField(max_length=1)
+		
+		def __unicode__(self):
+		return self.descripcion
 ```
+* Agregar el modelo a la interfaz administrativa
+
+	* Creamos un archivo `admin.py`
+			
+```js
+			from 'app creada'.models import 'clase del modelo'
+			from django.contrib from admin
+			
+			admin.site.register('clase del modelo')
+		```
