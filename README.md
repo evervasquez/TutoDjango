@@ -155,3 +155,12 @@ settings.py
 			 )
 ```
 ###7.-TRABAJAR CON MODELOS
+
+* En la `app creada`, archivo models.py
+
+```
+	# ejemplo de modelo
+	class marca(models.Model):
+		descripcion = models.CharField(max_length=50)
+		estado = models.IntegerField(max_length=1)
+```
