@@ -137,3 +137,21 @@ settings.py
 		{% end block %}
 		```
 
+###6.-INSTALAR APP'S
+
+* Crear nueva aplicación
+
+```js
+		python manage.py startapp 'nombre de app'
+```
+* Instalar app en `settings.py`
+
+```js
+	INSTALLED_APPS = (
+	.
+	.
+	.
+        'nombre de app'
+			 )
+```
+###7.-TRABAJAR CON MODELOS
